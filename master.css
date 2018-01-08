@@ -5,6 +5,24 @@ body {
     display: flex;
     justify-content: center;
 }
+.circle {
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    animation: circle 3s linear infinite;
+}
+@keyframes circle {
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+    30%,
+    70% {
+        opacity: 0;
+    }
+}
 #video {
     width: 200px;
     height: 200px;
