@@ -13,7 +13,7 @@ function initError() {
 
 function capture(payload) {
 
-    if (payload.score > 40) {
+    if (payload.score > 70) {
         bgvid.play();
     } else bgvid.pause();
     score.textContent = payload.score;
