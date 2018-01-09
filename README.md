@@ -1,11 +1,15 @@
 # facetest
 
-Working DEMO: https://mejsik.github.io/facetest/ <br>
+Working <strong>DEMO</strong>: https://mejsik.github.io/facetest/ <br>
 
-v2.0 </br>
-        -Added video Progress Bar </br>
-        -1st video playing on move, 2nd on immobility </br>
+<h2>v2.0</h2>
+<ul>
+        <li>Added video Progress Bar</li>
+        <li>1st video playing on move, 2nd on immobility</li>
+</ul>
         
-v1.0<br>
-        -Video playing when you're moving </br>
-        -Camera movement detection </br>
+<h2>v1.0</h2>
+<ul>
+        -Video playing when you're moving</li>
+        -Camera movement detection</li>
+</ul>
