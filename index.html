@@ -2,41 +2,161 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Face Move</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Konkurs</title>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        table,
+        tr,
+        td {
+            padding: 5px;
+        }
+        
+        .after {
+            display: none;
+            background: rgba(47, 47, 47, 0.40);
+            color: #fff;
+        }
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn t work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
 </head>
 
 <body>
+    <div id="contest">
 
 
-    <video id="bgvid" playsinline paused muted loop>
-        <source src="oceans.mp4" type="video/mp4">
-    </video>
-    <video id="bgvidtwo" playsinline paused muted loop>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-    </video>
+        <video id="bgvid" playsinline paused muted loop>
+            <source src="oceans.mp4" type="video/mp4">
+        </video>
+        <video id="bgvidtwo" playsinline paused muted loop>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
 
 
-    <div id="polina">
-        <div id="custom-seekbar">
-            <span></span>
+        <div id="polina">
+            <div id="custom-seekbar">
+                <span></span>
+            </div>
+
+            <figure>
+                <figcaption>Live Video
+                    <div class="circle"></div> <span id="score" style="display:none;"></span></figcaption>
+
+                <video id="video"></video>
+
+
+
+            </figure>
+
+
         </div>
+    </div>
+    <div class="after">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1 class="text-center">Pytanie Konkursowe</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, earum ad! Sit dolores molestias nulla nostrum repellat, dolorum magni et quis soluta assumenda beatae natus animi odit, necessitatibus eaque veniam.</p>
+                    <form class="form-inline" action="/action_page.php">
+                        <fieldset>
+                            <legend>Odpowiedź:</legend>
+                            <div class="form-group">
+                                <label for="textarea">Twoja odpowiedź</label>
+                                <br>
+                                <textarea type="textarea" rows="3" cols="70"></textarea>
+                            </div>
+                            <table>
+                                <tr>
+                                    <div class="form-group">
 
-        <figure>
-            <figcaption>Live Video
-                <div class="circle"></div> <span id="score" style="display:none;"></span></figcaption>
-
-            <video id="video"></video>
 
 
+                                        <td>
+                                            <label for="email">Imię:</label>
+                                        </td>
+                                        <td>
+                                            <input type="email" class="form-control" id="email" placeholder="Wpisz Imię" name="email">
+                                        </td>
+                                    </div>
+                                     <div class="form-group">
 
-        </figure>
 
 
+                                        <td>
+                                            <label for="email">Nazwisko:</label>
+                                        </td>
+                                        <td>
+                                            <input type="email" class="form-control" id="email" placeholder="Wpisz nazwisko" name="email">
+                                        </td>
+                                    </div>
+                                </tr>
+                                <tr>
+                                    <div class="form-group">
+
+
+
+                                        <td>
+                                            <label for="email">Email:</label>
+                                        </td>
+                                        <td>
+                                            <input type="email" class="form-control" id="email" placeholder="Wpisz email" name="email">
+                                        </td>
+                                    </div>
+                                    <div class="form-group">
+
+
+
+                                        <td>
+                                            <label for="pwd">Password:</label>
+                                        </td>
+                                        <td>
+                                            <input type="password" class="form-control" id="pwd" placeholder="Wpisz password" name="pwd">
+                                        </td>
+                                    </div>
+                                </tr>
+                            </table>
+
+
+
+
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="remember"> Akceptuje regulamin</label>
+                            </div>
+                            <button type="submit" class="btn btn-success">Wyślij</button>
+                        </fieldset>
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
     </div>
 
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
     <script src="jquery-3.2.1.min.js"></script>
     <script src="diff-cam-engine.js"></script>
     <script src="site.js"></script>
