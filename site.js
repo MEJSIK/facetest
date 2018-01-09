@@ -43,7 +43,7 @@ bgvid.ontimeupdate = function () {
     $("#custom-seekbar span").css("width", percentage + "%");
     console.log(percentage);
 
-    if (percentage >= 100) {
+    if (percentage >= 10) {
         $("#contest").css("display", "none");
         $(".after").css("display", "block");
         $("body").css("background", "url('bg.jpg') no-repeat 50% 0%");
