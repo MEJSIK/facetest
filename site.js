@@ -35,7 +35,7 @@ DiffCamEngine.init({
     initErrorCallback: initError,
     captureCallback: capture
 });
-
+ 
 //Progress Bar
 bgvid.ontimeupdate = function () {
 
