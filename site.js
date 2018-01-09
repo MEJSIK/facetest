@@ -35,3 +35,19 @@ DiffCamEngine.init({
     initErrorCallback: initError,
     captureCallback: capture
 });
+
+//Progress Bar
+bgvid.ontimeupdate = function () {
+    var percentage = (bgvid.currentTime / bgvid.duration) * 100;
+    $("#custom-seekbar span").css("width", percentage + "%");
+};
+
+//click
+$("#custom-seekbar").on("click", function (e) {
+    var offset = $(this).offset();
+    var left = (e.pageX - offset.left);
+    var totalWidth = $("#custom-seekbar").width();
+    var percentage = (left / totalWidth);
+    var vidTime = bgvid.duration * percentage;
+    bgvid.currentTime = vidTime;
+});
