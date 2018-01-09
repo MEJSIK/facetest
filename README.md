@@ -10,6 +10,6 @@ Working <strong>DEMO</strong>: https://mejsik.github.io/facetest/ <br>
         
 <h2>v1.0</h2>
 <ul>
-        -Video playing when you're moving</li>
-        -Camera movement detection</li>
+        <li>Video playing when you're moving</li>
+        <li>Camera movement detection</li>
 </ul>
