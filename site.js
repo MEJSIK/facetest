@@ -2,7 +2,6 @@ var video = document.getElementById('video');
 var canvas = document.getElementById('motion');
 var score = document.getElementById('score');
 var bgvid = document.getElementById('bgvid');
-var bgvidtwo = document.getElementById('bgvidtwo');
 
 function initSuccess() {
     DiffCamEngine.start();
@@ -14,18 +13,10 @@ function initError() {
 
 function capture(payload) {
 
-    if (payload.score > 150) {
-        bgvid.style.display = "block";
-        bgvidtwo.style.display = "none";
-        bgvidtwo.pause();
+    if (payload.score > 3) {
         bgvid.play();
-    } else {
-        bgvid.pause();
-        bgvid.style.display = "none";
-        bgvidtwo.style.display = "block";
-        bgvidtwo.play();
-    }
-    //    score.textContent = payload.score;
+    } else bgvid.pause();
+    score.textContent = payload.score;
 }
 
 DiffCamEngine.init({
@@ -34,20 +25,4 @@ DiffCamEngine.init({
     initSuccessCallback: initSuccess,
     initErrorCallback: initError,
     captureCallback: capture
-});
-
-//Progress Bar
-bgvid.ontimeupdate = function () {
-    var percentage = (bgvid.currentTime / bgvid.duration) * 100;
-    $("#custom-seekbar span").css("width", percentage + "%");
-};
-
-//click
-$("#custom-seekbar").on("click", function (e) {
-    var offset = $(this).offset();
-    var left = (e.pageX - offset.left);
-    var totalWidth = $("#custom-seekbar").width();
-    var percentage = (left / totalWidth);
-    var vidTime = bgvid.duration * percentage;
-    bgvid.currentTime = vidTime;
 });

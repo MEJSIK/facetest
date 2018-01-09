@@ -1,54 +1,6 @@
 body {
     margin: 0;
-    padding: 0;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-}
-.circle {
-    width: 20px;
-    height: 20px;
-    background: red;
-    border-radius: 50%;
-    animation: circle 3s linear infinite;
-}
-@keyframes circle {
-    0%,
-    50%,
-    100% {
-        opacity: 1;
-    }
-    30%,
-    70% {
-        opacity: 0;
-    }
-}
-#custom-seekbar {
-    cursor: pointer;
-    height: 10px;
-    margin-bottom: 10px;
-    outline: thin solid #0f0086;
-    overflow: hidden;
-    position: relative;
-    width: 400px;
-}
-#custom-seekbar span {
-    background-color: #fc932a;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 10px;
-    width: 0px;
-}
-#video {
-    width: 200px;
-    height: 200px;
-    border: 5px solid #00216c;
-    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.65);
-    border-radius: 50%;
-}
-#motion {
-    width: 100%;
+    background: #000;
 }
 #bgvid {
     position: fixed;
@@ -60,34 +12,22 @@ body {
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
-    transition: 1s opacity;
-}
-#bgvidtwo {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -101;
-    transform: translateX(-50%) translateY(-50%);
+    background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    background-size: cover;
     transition: 1s opacity;
 }
 .stopfade {
     opacity: .5;
 }
 #polina {
-    position: relative;
-    top: 40vh;
     font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
     font-weight: 100;
     background: rgba(0, 0, 0, 0.3);
     color: white;
     padding: 2rem;
-    /*    width: 33%;*/
+    width: 33%;
     margin: 2rem;
-    /*    float: right;*/
+    float: right;
     font-size: 1.2rem;
 }
 h1 {
@@ -96,8 +36,6 @@ h1 {
     margin-top: 0;
     letter-spacing: .3rem;
 }
-
-/*
 #polina button {
     display: block;
     width: 80%;
@@ -111,12 +49,9 @@ h1 {
     cursor: pointer;
     transition: .3s background;
 }
-
 #polina button:hover {
     background: rgba(0, 0, 0, 0.5);
-
-*/
-
+}
 a {
     display: inline-block;
     color: #fff;
@@ -127,4 +62,9 @@ a {
 }
 a:hover {
     background: rgba(0, 0, 0, 0.9);
+}
+@media screen and (max-width: 500px) {
+    div {
+        width: 70%;
+    }
 }
