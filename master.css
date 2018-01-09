@@ -23,6 +23,23 @@ body {
         opacity: 0;
     }
 }
+#custom-seekbar {
+    cursor: pointer;
+    height: 10px;
+    margin-bottom: 10px;
+    outline: thin solid #0f0086;
+    overflow: hidden;
+    position: relative;
+    width: 400px;
+}
+#custom-seekbar span {
+    background-color: #fc932a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 0px;
+}
 #video {
     width: 200px;
     height: 200px;
