@@ -38,11 +38,23 @@ DiffCamEngine.init({
 
 //Progress Bar
 bgvid.ontimeupdate = function () {
+
     var percentage = (bgvid.currentTime / bgvid.duration) * 100;
     $("#custom-seekbar span").css("width", percentage + "%");
+    console.log(percentage);
+
+    if (percentage >= 100) {
+        $("#contest").css("display", "none");
+        $(".after").css("display", "block");
+        $("body").css("background", "url('bg.jpg') no-repeat 50% 0%");
+    }
+
+
+
 };
 
-//click
+// Rewind Video OPTIONAL
+/*
 $("#custom-seekbar").on("click", function (e) {
     var offset = $(this).offset();
     var left = (e.pageX - offset.left);
@@ -51,3 +63,4 @@ $("#custom-seekbar").on("click", function (e) {
     var vidTime = bgvid.duration * percentage;
     bgvid.currentTime = vidTime;
 });
+*/
