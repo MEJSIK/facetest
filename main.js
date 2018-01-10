@@ -6,7 +6,7 @@
  *  tree.
  */
 
-'use strict';
+'use strict'; 
 
 var errorElement = document.querySelector('#errorMsg');
 var video = document.querySelector('video');
