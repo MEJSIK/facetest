@@ -85,9 +85,59 @@ var DiffCamEngine = (function () {
             }
         };
 
-        navigator.mediaDevices.getUserMedia(constraints)
-            .then(initSuccess)
-            .catch(initError);
+        function handleSuccess(stream) {
+            var videoTracks = stream.getVideoTracks();
+            console.log('Got stream with constraints:', constraints);
+            console.log('Using video device: ' + videoTracks[0].label);
+            stream.oninactive = function () {
+                console.log('Stream inactive');
+            };
+            window.stream = stream; // make variable available to browser console
+            video.srcObject = stream;
+        }
+
+        function handleError(error) {
+            if (error.name === 'ConstraintNotSatisfiedError') {
+                errorMsg('The resolution ' + constraints.video.width.exact + 'x' +
+                    constraints.video.width.exact + ' px is not supported by your device.');
+            } else if (error.name === 'PermissionDeniedError') {
+                errorMsg('Permissions have not been granted to use your camera and ' +
+                    'microphone, you need to allow the page access to your devices in ' +
+                    'order for the demo to work.');
+            }
+            errorMsg('getUserMedia error: ' + error.name, error);
+        }
+
+        /* Get browser */
+        $j.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase());
+
+        /* Detect Chrome */
+        if ($j.browser.chrome) {
+            /* Do something for Chrome at this point */
+            navigator.mediaDevices.getUserMedia(constraints)
+                .then(initSuccess)
+                .catch(initError);
+            alert("You are using Chrome!");
+
+            /* Finally, if it is Chrome then jQuery thinks it's 
+               Safari so we have to tell it isn't */
+            $j.browser.safari = false;
+        }
+
+        /* Detect Safari */
+        if ($j.browser.safari) {
+            /* Do something for Safari */
+            navigator.mediaDevices.getUserMedia(constraints)
+                .then(handleSuccess).catch(handleError);
+            alert("You are using Safari!");
+        }
+
+
+
+
+
+
+
     }
 
     function initSuccess(requestedStream) {

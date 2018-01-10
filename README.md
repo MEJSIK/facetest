@@ -4,6 +4,7 @@ Working <strong>DEMO</strong>: https://mejsik.github.io/facetest/ <br>
 <h2>v2.2</h2>
 <ul>
         <li>Safari issue with not working camera solved</li>
+        <li>Added Browser Detection</li>
        </ul>
 <h2>v2.1</h2>
 <ul>
