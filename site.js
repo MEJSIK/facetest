@@ -14,7 +14,7 @@ function initError() {
 
 function capture(payload) {
 
-    if (payload.score > 1000) {
+    if (payload.score > 750) {
         bgvid.style.display = "block";
         bgvidtwo.style.display = "none";
         bgvidtwo.pause();
