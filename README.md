@@ -22,3 +22,6 @@ Working <strong>DEMO</strong>: https://mejsik.github.io/facetest/ <br>
         <li>Video playing when you're moving</li>
         <li>Camera movement detection</li>
 </ul>
+
+Thanks:
+https://s.codepen.io/leemartin/debug/08e0fb00d12f70b751549d31ca77155b
