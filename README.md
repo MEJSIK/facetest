@@ -1,9 +1,10 @@
-# facetest
+# Motion Test
+
+Program using diff-cam to play video when camera are moving, shaking or whatever. Actually working on Android 7.0 on Chrome, Firefox, and IOS 11 on Safari 11+.
 
 Working <strong>DEMO</strong>: https://mejsik.github.io/facetest/ <br>
 <h2>v2.2</h2>
 <ul>
-        <li>Safari issue with not working camera solved</li>
         <li>Added Browser Detection</li>
        </ul>
 <h2>v2.1</h2>
